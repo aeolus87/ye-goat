@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  /* Hide scrollbar for mobile devices */
+  @media (max-width: 640px) {
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+
+    .no-scrollbar {
+      -ms-overflow-style: none; /* IE and Edge */
+      scrollbar-width: none; /* Firefox */
+      overflow-x: auto; /* Ensure horizontal scrolling */
+    }
+  }
+
+  /* Custom scrollbar for webkit browsers */
+  ::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #161616;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #ffc800;
+    border-radius: 10px;
+  }
+
+  /* Custom scrollbar for Firefox */
+  .custom-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: #888 #f1f1f1;
+  }
+
+  /* 3D Transform and Card Flip utilities */
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+
+  .rotate-y-180 {
+    transform: rotateY(180deg);
+  }
+}
+
+.transition-container {
+  transition: opacity 0.5s ease-in-out;
+  opacity: 1;
+}
+
+.transition-container.fade-out {
+  opacity: 0;
+}
+
+.transition-container.fade-in {
+  opacity: 1;
+}
+
+/* Optionally, you might want to add a background color to prevent flashes of white */
+body {
+  background-color: black; /* or whatever your desired background color is */
+}
+
+* {
+  font-family: "Helvetica", "Helvetica Neue", Arial, sans-serif;
+}
+
+@media screen and (max-width: 768px) and (orientation: landscape) {
+  html {
+    transform: rotate(-90deg);
+    transform-origin: left top;
+    width: 100vh;
+    height: 100vw;
+    overflow-x: hidden;
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }
+}

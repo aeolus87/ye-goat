@@ -1,0 +1,31 @@
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #000;
+}
+
+.loader {
+  display: flex;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-weight: bold;
+  font-size: 48px;
+  color: #fff;
+}
+
+.loader span {
+  display: inline-block;
+  animation: pulse 1.4s ease-in-out infinite alternate;
+}
+
+.loader span:nth-child(odd) {
+  animation-delay: -0.7s;
+}
+
+@keyframes pulse {
+  to {
+    transform: scale(1.2);
+    opacity: 0.5;
+  }
+}

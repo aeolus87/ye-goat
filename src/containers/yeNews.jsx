@@ -13,7 +13,7 @@ const KanyeNewsPage = () => {
 
   useEffect(() => {
     const checkMobile = () => {
-      setIsMobile(window.innerWidth <= 768); // Adjust this breakpoint as needed
+      setIsMobile(window.innerWidth <= 768); 
     };
 
     checkMobile();

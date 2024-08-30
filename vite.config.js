@@ -29,7 +29,4 @@ export default defineConfig({
       },
     },
   },
-  build: {
-    outDir: "build", // This line specifies the output directory
-  },
 });
